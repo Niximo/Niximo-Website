@@ -4,7 +4,7 @@ import BlueArrow from '../assets/bluearrow.svg'
 const CaseStudies = () => {
   return (
     <>
-    <div className="w-[1440px] px-24 inline-flex justify-start items-start gap-10">
+    <div className="w-full px-24 inline-flex justify-start items-start gap-10">
         <div data-property-1="Green" className="inline-flex flex-col justify-start items-start">
             <div className="px-2 py-1.5 bg-cyan-300 rounded-md flex flex-col justify-start items-start gap-2.5">
                 <div className="justify-start text-black text-4xl font-medium font-'Space_Grotesk'">Case Studies</div>

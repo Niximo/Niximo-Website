@@ -4,14 +4,8 @@ import Netflix from '../assets/Netflix.svg'
 import Notion from '../assets/Notion.svg'
 import Zoom from '../assets/Zoom.svg'
 import Dribble from '../assets/Dribble.svg'
-import ArrowR from '../assets/Arrow right.svg'
-import ArrowL from '../assets/Arrow left.svg'
-import BVector from '../assets/BlueVector.svg'
 
 import Marquee from "react-fast-marquee"
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
 
 const LogoSlider = () => {
         const logos = [
@@ -24,7 +18,7 @@ const LogoSlider = () => {
         ]
 
         return (
-        <div className="bg-white py-8">
+        <div className="w-full bg-white py-9">
         <Marquee pauseOnHover speed={50} gradient={false}>
         {logos.map((src, index) => (
           <img
