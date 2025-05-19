@@ -18,14 +18,14 @@ const LogoSlider = () => {
         ]
 
         return (
-        <div className="w-full bg-white py-9">
+        <div className="w-full bg-white py-6 sm:py-9">
         <Marquee pauseOnHover speed={50} gradient={false}>
         {logos.map((src, index) => (
           <img
             key={index}
             src={src}
             alt={`client-${index}`}
-            className="h-13 mx-10 object-contain"
+            className="h-10 sm:h-12 md:h-16 mx-4 sm:mx-6 md:mx-8 object-contain max-w-[160px]"
           />
         ))}
       </Marquee>
