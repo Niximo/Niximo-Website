@@ -15,11 +15,10 @@ import ServicesComp from '../components/ServicesComp.jsx'
 const Home = () => {
 
   return (
-  <div className="w-full flex flex-col items-center gap-10 pt-10 px-4 sm:px-8 md:px-16 lg:px-24">
+  <div className="w-full min-h-screen flex flex-col items-center gap-10 pt-10 px-4 sm:px-8 md:px-16 lg:px-24">
   {/* Your components go here */}
-
-
-    {/* header */}
+  
+  {/* header */}
 
   <Navbar/>
 

@@ -11,9 +11,10 @@ import Navbar from '../components/Navbar'
 
 const Service = () => {
   return (
-    <div className="w-full h-[6539px] relative bg-white overflow-hidden">
+    <div className="w-full min-h-screen relative bg-white overflow-hidden">
     <Navbar/>
 
+    <div className='flex-grow'>
     <section className="w-full px-6 py-10 flex flex-col lg:flex-row items-center justify-between bg-zinc-100 rounded-[45px] max-w-[1236px] mx-auto mt-15">
   
   <div className="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
@@ -148,31 +149,8 @@ const Service = () => {
 
 </div>
 
-    {/* <div className="left-[381px] top-[2859px] absolute justify-start text-black text-xl font-normal font-'Space_Grotesk' leading-7">Real-World Wins with Niximo's Solutions</div>
-    <div className="px-2 py-1 left-[111px] top-[2848px] absolute bg-cyan-300 rounded-md inline-flex flex-col justify-start items-start gap-2.5">
-        <div className="justify-start text-black text-4xl font-medium font-'Space_Grotesk'">Use Cases</div>
-    </div>
-    
-    <div className="w-[1236px] h-96 left-[111px] top-[3029px] absolute bg-zinc-900 rounded-[46px]" />
-    <div className="left-[167px] top-[3121px] absolute justify-start text-white text-3xl font-medium font-'Space_Grotesk'">ElephantJuice.org</div>
-    <div className="w-72 left-[167px] top-[3190px] absolute justify-start text-white text-xl font-normal font-'Space_Grotesk' leading-7">Full-stack Web App → 30% increase in leads and revenue</div>
-    <div className="left-[167px] top-[3289px] absolute justify-start text-cyan-300 text-xl font-normal font-'Space_Grotesk' leading-7">Learn more</div>
-    
-    <img src={Vector4} className='w-6 h-5 left-[270px] top-[3294px] absolute'/>
-    <div className="w-0 h-72 left-[512px] top-[3101px] absolute outline-3 outline-offset-[-2px] outline-neutral-600" />
-    <div className="left-[579px] top-[3121px] absolute justify-start text-white text-3xl font-medium font-'Space_Grotesk'">Easternbf</div>
-    <div className="w-72 left-[579px] top-[3190px] absolute justify-start text-white text-xl font-normal font-'Space_Grotesk' leading-7">UI/UX & Web Development → 25% more engagement, 15% more conversions</div>
-    <div className="left-[579px] top-[3289px] absolute justify-start text-cyan-300 text-xl font-normal font-'Space_Grotesk' leading-7">Learn more</div>
-    
-    <img src={Vector4} className='w-6 h-5 left-[684px] top-[3294px] absolute'/>
-    <div className="w-0 h-72 left-[924px] top-[3101px] absolute outline-3 outline-offset-[-2px] outline-neutral-600" />
-    <div className="left-[991px] top-[3121px] absolute justify-start text-white text-3xl font-medium font-'Space_Grotesk'">Spacetross</div>
-    <div className="w-72 left-[991px] top-[3190px] absolute justify-start text-white text-xl font-normal font-'Space_Grotesk' leading-7">Booking Platform → 50% jump in flight bookings</div>
-    <div className="left-[991px] top-[3289px] absolute justify-start text-cyan-300 text-xl font-normal font-'Space_Grotesk' leading-7">Learn more</div> */}
-
   <div className="w-full max-w-[1236px] mx-auto px-4 py-35 space-y-10">
 
-  {/* Section Header */}
   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
     <div className="bg-cyan-300 rounded-md px-3 py-1.5 inline-block">
       <div className="text-black text-2xl sm:text-4xl font-medium font-'Space_Grotesk'">Use Cases</div>
@@ -182,10 +160,8 @@ const Service = () => {
     </div>
   </div>
 
-  {/* Use Case Cards Container */}
   <div className="bg-zinc-900 rounded-[46px] p-6 sm:p-25 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 mt-30">
 
-    {/* Use Case Card */}
     {[
       {
         title: "ElephantJuice.org",
@@ -201,18 +177,20 @@ const Service = () => {
       }
     ].map(({ title, description }, i) => (
       i === 2 ? 
-      ( <div key={i} className="flex flex-col gap-4">
+      ( <div className='flex flex-row md:w-60 md:pl-10 gap-10'>
+        <div key={i} className="flex flex-col gap-5">
         <div className="text-white text-2xl sm:text-3xl font-medium font-'Space_Grotesk'">{title}</div>
-        <div className="text-white text-base sm:text-xl font-normal font-'Space_Grotesk' leading-7">{description}</div>
+        <div className="text-white sm:h-30 text-base sm:text-xl font-normal font-'Space_Grotesk' leading-7">{description}</div>
         <div className="flex items-center gap-2 text-cyan-300 text-base sm:text-xl font-normal font-'Space_Grotesk' cursor-pointer">
           Learn more
           <img src={Vector4} alt="Arrow" className="w-4 h-4 sm:w-5 sm:h-5" />
         </div>
+      </div>
       </div> ) :
-      ( <div className='flex flex-row gap-15'>
-        <div key={i} className="flex flex-col gap-4">
+      ( <div className='flex flex-row md:w-80 gap-10'>
+        <div key={i} className="flex flex-col gap-5 md:pl-10">
         <div className="text-white text-2xl sm:text-3xl font-medium font-'Space_Grotesk'">{title}</div>
-        <div className="text-white text-base sm:text-xl font-normal font-'Space_Grotesk' leading-7">{description}</div>
+        <div className="text-white sm:h-30 text-base sm:text-xl font-normal font-'Space_Grotesk' leading-7">{description}</div>
         <div className="flex items-center gap-2 text-cyan-300 text-base sm:text-xl font-normal font-'Space_Grotesk' cursor-pointer">
           Learn more
           <img src={Vector4} alt="Arrow" className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -225,16 +203,8 @@ const Service = () => {
   </div>
 </div>
 
-    
-    {/* <div className="w-[1231px] h-[528px] left-[118px] top-[3578px] absolute bg-white rounded-[40px] shadow-[0px_6px_0px_0px_rgba(0,0,0,1.00)] border border-neutral-700" />
-    <div className="left-[187px] top-[3881px] absolute justify-start text-black text-xl font-bold font-'Space_Grotesk' leading-7">Let’s build together to grow your online presence</div>
-    <div className="w-[500px] left-[187px] top-[3752px] absolute justify-start text-black text-xl font-normal font-'Space_Grotesk' leading-7">From web development to AI and design, our team helps you grow faster with smarter tech and creative strategy. Let’s build together. </div>
-    <div className="left-[187px] top-[3648px] absolute justify-start text-black text-3xl font-medium font-'Space_Grotesk'">Ready to Build Something Amazing?</div>
-    <div className="w-[514.50px] h-0 left-[187px] top-[3719px] absolute outline-1 outline-offset-[-0.50px] outline-neutral-600" />
-    <div className="w-[573px] h-16 left-[180px] top-[3975px] absolute bg-cyan-300 rounded-xl" />
-    <div className="left-[387px] top-[3995px] absolute justify-start text-black text-xl font-normal font-'Space_Grotesk' leading-7">Start My Project</div>
-    <img className="w-[517px] h-[517px] left-[792px] top-[3592px] absolute" src={Machine} /> */}
-  <section className="relative w-full sm:h-[600px] px-12 py-20 bg-white rounded-[40px] shadow-[0px_6px_0px_0px_rgba(0,0,0,1.00)] border border-neutral-700 max-w-[1236px] mx-auto mt-10">
+{/* use cases end */}
+  <section className="relative w-full sm:h-[620px] px-12 py-20 bg-white rounded-[40px] shadow-[0px_6px_0px_0px_rgba(0,0,0,1.00)] border border-neutral-700 max-w-[1236px] mx-auto mt-10">
   <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 sm:mt-[-30px]">
     {/* Text Content */}
     <div className="flex-1 space-y-12">
@@ -248,7 +218,7 @@ const Service = () => {
       <p className="text-xl font-bold font-'Space_Grotesk' text-black">
         Let’s build together to grow your online presence
       </p>
-      <button className="w-full sm:w-[520px] h-16 bg-cyan-300 rounded-xl flex items-center justify-center">
+      <button className="w-full sm:w-[520px] h-16 bg-cyan-300 rounded-xl flex items-center justify-center cursor-pointer">
         <span className="text-black text-xl font-normal font-'Space_Grotesk'">Start My Project</span>
       </button>
     </div>
@@ -263,9 +233,11 @@ const Service = () => {
     </div>
   </div>
 </section>
-
-    <FinalSection/>
-</div>
+    </div>
+    <div className='min-h-screen flex flex-col justify-end items-center'>
+      <FinalSection/>
+    </div>
+    </div>
   )
 }
 
