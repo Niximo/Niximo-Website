@@ -10,6 +10,7 @@ import Logo from '../assets/niximo_group.png'
 import Navbar from '../components/Navbar'
 
 const Service = () => {
+
   return (
     <div className="w-full min-h-screen relative bg-white overflow-hidden">
     <Navbar/>
@@ -31,9 +32,6 @@ const Service = () => {
  </div>
     </section>
 
-
-  
-  
   <div className="flex items-center gap-4 mt-10 px-6 sm:px-10 md:px-20 lg:px-40 lg:justify-items-center">
   <a href='' target='_blank'>
   <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center">

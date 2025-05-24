@@ -4,6 +4,11 @@ import { HiOutlineMenu, HiX } from 'react-icons/hi';
 
 const Navbar = () => {
 
+  
+  const pathname = location.pathname
+
+  const isServices = pathname === "/services"; 
+
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -23,12 +28,18 @@ const Navbar = () => {
       {/* Menu - Desktop */}
       <nav className="hidden lg:flex items-center gap-8">
         {['About us', 'Services', 'Our Works', 'Career', 'Blog'].map((item) => (
-          <div
+          item === 'Services' ?
+          (<div
+            key={item}
+            className={ `text-black text-lg font-normal font-'Space_Grotesk' leading-7 cursor-pointer ${isServices ? 'text-black bg-cyan-300 w-17 h-7' : ''}`}
+          >
+            {item}
+          </div>) : (<div
             key={item}
             className="text-black text-lg font-normal font-'Space_Grotesk' leading-7 cursor-pointer"
           >
             {item}
-          </div>
+          </div>)
         ))}
         <div className="px-6 py-3 rounded-2xl border border-zinc-900 cursor-pointer">
           <div className="text-black text-lg font-normal font-'Space_Grotesk'">Request a quote</div>
